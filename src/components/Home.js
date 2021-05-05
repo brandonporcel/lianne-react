@@ -1,37 +1,43 @@
 import React from 'react';
-import img from '../img';
 import styled from 'styled-components';
-import SocialIcon from './SocialIcon';
+import img from '../img';
+import Button from './Button';
+import Footer from './Footer';
+
 const SectionTag = styled.section`
-	background-color: red;
 	margin: 0 auto;
-	display: block;
+	width: 608px;
+	.newAlbumAndOutNow {
+		display: flex;
+		justify-content: space-between;
+		height: auto;
+		padding: 20px 0;
+		& span {
+			font-size: 32px;
+		}
+	}
 `;
 export default function Home() {
 	return (
 		<div>
 			<SectionTag>
-				<div className="logo-ctn">
+				<div>
 					<img src={img.purpleLogo} alt={img.whiteLogo} />
 				</div>
-				<div className="album-ctn">
-					<div className="album-img">
+				<div>
+					<div>
 						<img src={img.album} alt="" />
 					</div>
-					<div className="newAlbumAndOutNow"></div>
-					<div className="listenNow">{/* <a href="#"></a> */}</div>
+					<div className="newAlbumAndOutNow">
+						<span>The new album</span>
+						<span>Out now</span>
+					</div>
+					<div>
+						<Button text="LISTEN"></Button>
+					</div>
 				</div>
-				<footer>
-					<p>blablalblalblalba</p>
-					<p>
-						<SocialIcon></SocialIcon>
-						{/* <a href=""></a>
-						<a href=""></a>
-						<a href=""></a>
-						<a href=""></a> */}
-					</p>
-				</footer>
 			</SectionTag>
+			<Footer></Footer>
 		</div>
 	);
 }
