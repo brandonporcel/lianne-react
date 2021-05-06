@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+
 const Atag = styled.a`
 	font-size: 20px;
 	font-weight: 400;
@@ -16,5 +17,21 @@ const Atag = styled.a`
 	}
 `;
 export default function Button({ text }) {
-	return <Atag>{text}</Atag>;
+	const [ColorHover, setColorHover] = useState('');
+	useEffect(() => {
+		if (window.location.pathname === '/') {
+			// setColorHover = 'blue';
+		} else if (window.location.pathname === '/tour') {
+			console.log('tour');
+		} else if (window.location.pathname === '/merch') {
+			console.log('merch');
+		} else if (window.location.pathname === '/signup') {
+			console.log('signup');
+		}
+	}, [ColorHover]);
+	return (
+		<Atag onMouseOver={ColorHover} className="buttonComponent">
+			{text}
+		</Atag>
+	);
 }
