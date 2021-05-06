@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import img from '../img';
 import Button from './Button';
-import Footer from './Footer';
 
 const SectionTag = styled.section`
 	margin: 0 auto;

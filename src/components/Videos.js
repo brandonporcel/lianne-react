@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import img from '../img';
-import Footer from './Footer';
 import styled from 'styled-components';
 const VideoSection = styled.section`
 	padding-top: 81px;

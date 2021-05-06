@@ -6,6 +6,10 @@ import album from './images/LianneAlbumCover.png';
 import paperTnail from './images/PaperThinThumbnail.jpg';
 import bittersweetTnail from './images/BittersweetThumbnail.jpg';
 import fishesTnail from './images/WeirdFishesThumbnail.jpg';
+// tour
+import tour from './images/TourBG.jpg';
+import tourNoiseBG from './images/TourNoiseBG.jpg';
+
 // merch
 import clearVinyl from './images/ExclusiveClearVinyl.png';
 const images = {
@@ -16,6 +20,9 @@ const images = {
 	paperTnail,
 	bittersweetTnail,
 	fishesTnail,
+	//
+	tour,
+	tourNoiseBG,
 	//
 	clearVinyl,
 };
