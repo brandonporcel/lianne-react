@@ -6,6 +6,7 @@ import Videos from './components/Videos';
 import Tour from './components/Tour';
 import Merch from './components/Merch';
 import SignUp from './components/SignUp';
+import Footer from './components/Footer';
 function App() {
 	return (
 		<>
@@ -18,6 +19,7 @@ function App() {
 					<Route path="/merch" component={Merch}></Route>
 					<Route path="/signup" component={SignUp}></Route>
 				</Switch>
+				<Footer></Footer>
 			</Router>
 		</>
 	);

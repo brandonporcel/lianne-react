@@ -18,6 +18,7 @@ const MenuLinks = styled.nav`
 		text-transform: uppercase;
 		margin: 0 25px;
 		letter-spacing: 2px;
+		transition: all 0.5s ease-in-out;
 		&:hover {
 			color: #b9a2c3;
 		}
