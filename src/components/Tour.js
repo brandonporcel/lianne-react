@@ -20,7 +20,7 @@ const Container = styled.div`
 		width: 680px;
 		height: auto;
 		margin: 40px auto 40px 40%;
-		background-color: red;
+
 		background-image: url(${img.tourNoiseBG});
 		h4 {
 			padding-bottom: 40px;

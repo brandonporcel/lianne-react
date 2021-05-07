@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Atag = styled.a`
@@ -17,21 +17,22 @@ const Atag = styled.a`
 	}
 `;
 export default function Button({ text }) {
-	const [ColorHover, setColorHover] = useState('');
-	useEffect(() => {
+	const hoverr = () => {
 		if (window.location.pathname === '/') {
-			// setColorHover = 'blue';
+			console.log(document.querySelector('.buttonComponent'), 'home');
 		} else if (window.location.pathname === '/tour') {
-			console.log('tour');
+			console.log(document.querySelector('.buttonComponent'), 'tour');
 		} else if (window.location.pathname === '/merch') {
-			console.log('merch');
+			console.log(document.querySelector('.buttonComponent'), 'merch');
 		} else if (window.location.pathname === '/signup') {
 			console.log('signup');
+		} else {
+			console.log('chaw');
 		}
-	}, [ColorHover]);
-	return (
-		<Atag onMouseOver={ColorHover} className="buttonComponent">
-			{text}
-		</Atag>
-	);
+	};
+	document.addEventListener('DOMContentLoaded', () => {
+		window.onhashchange = hoverr();
+	});
+
+	return <Atag className="buttonComponent">{text}</Atag>;
 }
