@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Lianne La Havas
 
 lianne la havas website recreation(with React JS) <br>
 link web: soon..
