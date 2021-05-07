@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import img from '../img';
-import Button from './Button';
+
+import Event from './Event';
 const SetBackground = {
-	backgroundImage: `url(${img.tour})`,
+	backgroundImage: `url(${img.tourBG})`,
 	backgroundPosition: 'center',
 	backgroundSize: 'cover',
 	backgroundRepeat: 'no-repeat',
@@ -25,23 +26,6 @@ const Container = styled.div`
 			padding-bottom: 40px;
 			font-size: 24px;
 		}
-		.ticket-ctn {
-			height: auto;
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			padding: 10px 0;
-			font-family: serif;
-			p {
-				padding: 0 5px;
-			}
-			a {
-				height: 39px;
-				padding: 10px;
-				width: 70%;
-				font-size: 15px;
-				text-transform: lowercase;
-			}
-		}
 	}
 	.tourBackground {
 		position: fixed;
@@ -58,18 +42,16 @@ export default function Tour() {
 				<div className="tourSection">
 					<h4>Live Dates</h4>
 					<div>
-						<div className="ticket-ctn">
-							<p>3.5.2021</p>
-							<p>Florencio valera</p>
-							<p>Buenos AIRES, argentina</p>
-							<Button text="tickets"></Button>
-						</div>
-						<div className="ticket-ctn">
-							<p>3.5.2021</p>
-							<p>Teatro juan domingo Peron</p>
-							<p>Lomas de Zamora, argentina</p>
-							<Button text="tickets"></Button>
-						</div>
+						<Event
+							date="9.12.2018"
+							place="Teatro juan domingo Peron"
+							city="Lomas de Zamora, argentina"
+						></Event>
+						<Event
+							date="3.5.2021"
+							place="Florencio Valera Stadium"
+							city="Buenos AIRES, argentina"
+						></Event>
 					</div>
 				</div>
 				<div className="tourBackground" style={SetBackground}></div>
