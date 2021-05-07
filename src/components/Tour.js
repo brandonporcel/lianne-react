@@ -20,22 +20,26 @@ const Container = styled.div`
 		width: 680px;
 		height: auto;
 		margin: 40px auto 40px 40%;
-
 		background-image: url(${img.tourNoiseBG});
 		h4 {
 			padding-bottom: 40px;
 			font-size: 24px;
 		}
 		.ticket-ctn {
-			border: 1px solid;
 			height: auto;
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
 			padding: 10px 0;
+			font-family: serif;
 			p {
 				padding: 0 5px;
-				/* font-size: 14px; */
-				font-family: serif;
+			}
+			a {
+				height: 39px;
+				padding: 10px;
+				width: 70%;
+				font-size: 15px;
+				text-transform: lowercase;
 			}
 		}
 	}
@@ -53,17 +57,17 @@ export default function Tour() {
 			<Container>
 				<div className="tourSection">
 					<h4>Live Dates</h4>
-					<div className="tickets-ctn">
+					<div>
 						<div className="ticket-ctn">
-							<p className="ticket-date">3.5.2021</p>
-							<p className="event-place">Florencio valera</p>
-							<p className="event-city">Buenos AIRES, argentina</p>
+							<p>3.5.2021</p>
+							<p>Florencio valera</p>
+							<p>Buenos AIRES, argentina</p>
 							<Button text="tickets"></Button>
 						</div>
 						<div className="ticket-ctn">
-							<p className="ticket-date">3.5.2021</p>
-							<p className="event-place">Teatro juan domingo Peron</p>
-							<p className="event-city">Lomas de Zamora, argentina</p>
+							<p>3.5.2021</p>
+							<p>Teatro juan domingo Peron</p>
+							<p>Lomas de Zamora, argentina</p>
 							<Button text="tickets"></Button>
 						</div>
 					</div>

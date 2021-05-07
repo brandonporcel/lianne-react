@@ -12,27 +12,33 @@ const Atag = styled.a`
 	cursor: pointer;
 	text-align: center;
 	&:hover {
-		color: var(--secondary-color);
-		border: 1px solid var(--secondary-color);
+		color: var(--black);
+		background-color: var(--white);
 	}
 `;
+
 export default function Button({ text }) {
-	const hoverr = () => {
+	const onMouseLeave = (e) => {
 		if (window.location.pathname === '/') {
-			console.log(document.querySelector('.buttonComponent'), 'home');
-		} else if (window.location.pathname === '/tour') {
-			console.log(document.querySelector('.buttonComponent'), 'tour');
-		} else if (window.location.pathname === '/merch') {
-			console.log(document.querySelector('.buttonComponent'), 'merch');
-		} else if (window.location.pathname === '/signup') {
-			console.log('signup');
-		} else {
-			console.log('chaw');
+			e.target.style.color = 'var(--white)';
+			e.target.style.border = '1px solid var(--white)';
 		}
 	};
-	document.addEventListener('DOMContentLoaded', () => {
-		window.onhashchange = hoverr();
-	});
+	const onMouseOver = (e) => {
+		if (window.location.pathname === '/') {
+			e.target.style.color = 'var(--secondary-color)';
+			e.target.style.border = '1px solid var(--secondary-color)';
+			e.target.style.backgroundColor = 'transparent';
+		}
+	};
 
-	return <Atag className="buttonComponent">{text}</Atag>;
+	return (
+		<Atag
+			onMouseOver={onMouseOver}
+			onMouseLeave={onMouseLeave}
+			className="buttonComponent"
+		>
+			{text}
+		</Atag>
+	);
 }
