@@ -16,7 +16,9 @@ const VideoSliderCtn = styled.div`
 		border-radius: 10px;
 	}
 `;
+const d = document;
 const wheelScroll = (e) => {
+	const sliderCtn = d.querySelector('.videoSliderCtn');
 	const isBrowser = {
 		chrome: () => navigator.userAgent.match(/chrome/i),
 		safarai: () => navigator.userAgent.match(/safarai/i),
@@ -35,23 +37,33 @@ const wheelScroll = (e) => {
 			);
 		},
 	};
-	let scroolSpeed = 1;
+	let scrollSpeed = 1;
 	if (isBrowser.firefox()) {
-		scroolSpeed = 30;
+		scrollSpeed = 30;
 	}
-	if (isBrowser.chrome()) {
-		scroolSpeed = 1.1;
+	if (isBrowser.edge() || isBrowser.chrome) {
+		scrollSpeed = 1.5;
 	}
 
-	document.querySelector('.videoSliderCtn').scrollLeft +=
-		-e.deltaY * scroolSpeed;
+	sliderCtn.scrollLeft += -e.deltaY * scrollSpeed;
 };
 export default function VideoSlider() {
-	document.addEventListener('DOMContentLoaded', () => {
-		document.querySelector('.videoSliderCtn').addEventListener('wheel', () => {
-			wheelScroll();
-			// document.querySelector('body').style.overflowY = 'hidden';
+	d.addEventListener('DOMContentLoaded', () => {
+		d.addEventListener('click', (e) => {
+			if (
+				e.target.matches('.videoSliderCtn') ||
+				e.target.matches('.videoSliderCtn div')
+			) {
+				d.addEventListener('wheel', (e) => {
+					if (e.target.matches('.videoSliderCtn')) {
+						wheelScroll(e);
+					}
+				});
+			}
 		});
+		// d.addEventListener('scroll', () => {
+		// 	d.querySelector('body').classList.add('noScroll');
+		// });
 	});
 	return (
 		<VideoSliderCtn className="videoSliderCtn">
