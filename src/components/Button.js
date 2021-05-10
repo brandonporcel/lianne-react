@@ -16,8 +16,7 @@ const Atag = styled.a`
 	text-align: center;
 	&:hover {
 		background: blue;
-		color: ${(props) =>
-			props.secondaryColor ? '1px solid red' : '1px solid green'};
+		color: ${(props) => (props.secondaryColor ? 'red' : 'var(--black)')};
 		/* background-color: ${(props) =>
 			props.secondary ? '1px solid blue' : '1px solid var(--black)'}; */
 	}
