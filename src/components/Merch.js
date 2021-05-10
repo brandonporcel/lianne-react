@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import img from '../img';
+import MerchContent from './MerchContent';
 const Container = styled.div`
 	height: 430px;
-	border: 1px solid red;
-	margin: 150px 0 0;
 	width: 100%;
-	border: 1px solid green;
 	display: flex;
 	align-items: flex-end;
 
@@ -14,13 +12,14 @@ const Container = styled.div`
 		display: flex;
 		overflow: auto hidden;
 		padding-left: 700px;
-	}
-	.merchContent {
-		margin-right: 50px;
-	}
-	.merchImage {
-		height: 380px;
-		width: 380px;
+		&::-webkit-scrollbar {
+			height: 7px;
+		}
+		&::-webkit-scrollbar-thumb {
+			height: 7px;
+			background-color: rgb(255, 255, 255, 0.75);
+			border-radius: 10px;
+		}
 	}
 
 	.background {
@@ -36,57 +35,51 @@ const Container = styled.div`
 		top: 0;
 	}
 `;
-
+const d = document;
+const wheelScroll = (e) => {
+	const isBrowser = {
+		chrome: () => navigator.userAgent.match(/chrome/i),
+		safarai: () => navigator.userAgent.match(/safarai/i),
+		firefox: () => navigator.userAgent.match(/firefox/i),
+		opera: () => navigator.userAgent.match(/opera|opera mini/i),
+		ie: () => navigator.userAgent.match(/msie|iemobile/i),
+		edge: () => navigator.userAgent.match(/edge/i),
+		any: function () {
+			return (
+				this.ie() ||
+				this.edge() ||
+				this.chrome() ||
+				this.safarai() ||
+				this.firefox() ||
+				this.opera()
+			);
+		},
+	};
+	let scroolSpeed = 1;
+	if (isBrowser.firefox()) {
+		scroolSpeed = 30;
+	}
+	if (isBrowser.chrome()) {
+		scroolSpeed = 1.1;
+	}
+	d.querySelector('.merchContents').scrollLeft += -e.deltaY * scroolSpeed;
+};
 export default function Merch() {
+	d.addEventListener('DOMContentLoaded', () => {
+		d.querySelector('.merchContents').addEventListener('wheel', wheelScroll);
+	});
 	return (
 		<Container>
 			<ul className="merchContents">
-				<li className="merchContent">
-					<div className="merchImage">
-						<img src={img.vinyl} alt="" />
-					</div>
-					<div className="merchCTA">
-						<a href="/">
-							<span></span>
-							<span></span>
-						</a>
-					</div>
-				</li>
-				<li className="merchContent">
-					<div className="merchImage">
-						<img src={img.sleeveVinyl} alt="" />
-					</div>
-					<div className="merchCTA">
-						<a href="/">
-							<span></span>
-							<span></span>
-						</a>
-					</div>
-				</li>
-				<li className="merchContent">
-					<div className="merchImage">
-						<img src={img.sleeve} alt="" />
-					</div>
-					<div className="merchCTA">
-						<a href="/">
-							<span></span>
-							<span></span>
-						</a>
-					</div>
-				</li>
-				<li className="merchContent">
-					<div className="merchImage">
-						<img src={img.sleeve} alt="" />
-					</div>
-					<div className="merchCTA">
-						<a href="/">
-							<span></span>
-							<span></span>
-						</a>
-					</div>
-				</li>
-			</ul>
+				{Object.values(img.merch).map((value) => (
+					<MerchContent img={value}></MerchContent>
+				))}
 
+				{/* <MerchContent img={img.sleeveVinyl}></MerchContent>
+				<MerchContent img={img.sleeve}></MerchContent>
+				<MerchContent img={img.tShirtVinyl}></MerchContent>
+				<MerchContent img={img.tShirt}></MerchContent> */}
+			</ul>
 			<div className="background"></div>
 		</Container>
 	);
