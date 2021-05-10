@@ -16,6 +16,7 @@ const SectionTag = styled.section`
 		}
 	}
 `;
+
 export default function Home() {
 	return (
 		<div>

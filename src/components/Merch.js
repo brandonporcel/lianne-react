@@ -71,8 +71,8 @@ export default function Merch() {
 	return (
 		<Container>
 			<ul className="merchContents">
-				{Object.values(img.merch).map((value) => (
-					<MerchContent img={value}></MerchContent>
+				{Object.values(img.merch).map((value, index) => (
+					<MerchContent key={index} img={value}></MerchContent>
 				))}
 
 				{/* <MerchContent img={img.sleeveVinyl}></MerchContent>

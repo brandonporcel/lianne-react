@@ -13,8 +13,6 @@ const VideoSection = styled.section`
 	}
 `;
 export default function Videos() {
-	document.querySelector('title').textContent = 'Lianne La Havas . Videos';
-
 	return (
 		<>
 			<VideoSection>
