@@ -17,16 +17,17 @@ import Footer from './components/Footer';
 // 		return pushState.apply(history, arguments);
 // 	};
 // })(window.history);
-console.log(window.location.pathname, 'aaa');
+
+let currentUrl = window.location.pathname;
 function App() {
 	useEffect(() => {
-		let currentUrl = window.location.pathname;
 		// https://itsopensource.com/how-to-call-a-function-on-URL-change-in-javascript/
 		(function (history) {
 			var pushState = history.pushState;
+			console.log(window.location.pathname, 'abrrr');
 			history.pushState = function (state) {
-				// currentUrl = window.location.pathname;
-				console.log(window.location.pathname);
+				currentUrl = window.location.pathname;
+				console.log(currentUrl);
 				// document.querySelector(
 				// 	'title'
 				// ).textContent = `Lianne La Havas . ${currentUrl}`;
