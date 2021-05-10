@@ -18,12 +18,14 @@ const Atag = styled.a`
 	&:hover {
 		color: ${(props) =>
 			props.secondary ? 'var(--secondary-color)' : 'var(--black)'};
-		background-color: ${(props) =>
-			props.secondary ? 'transparent' : 'var(--white)'};
-		background-color: ${(props) => props.secondaryBg};
+		background-color: ${(props) => props.secondaryBg || 'var(--white)'};
 	}
 `;
 
-export default function Button({ text, secondary }) {
-	return <Atag className="buttonComponent">{text}</Atag>;
+export default function Button({ text, secondaryBg }) {
+	return (
+		<Atag secondaryBg className="buttonComponent">
+			{text}
+		</Atag>
+	);
 }
