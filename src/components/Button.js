@@ -5,26 +5,39 @@ const Atag = styled.a`
 	font-size: 20px;
 	font-weight: 400;
 	display: block;
-	border: ${(props) =>
-		props.secondary
-			? '1px solid var(--secondary-color)'
-			: '1px solid var(--white)'};
-	color: var(--white);
+	border: 1px solid var(--white);
 	text-transform: uppercase;
 	padding: 11px 0 7px;
 	transition: all 0.5s ease-in-out;
 	cursor: pointer;
 	text-align: center;
 	&:hover {
-		color: ${(props) =>
-			props.secondary ? 'var(--secondary-color)' : 'var(--black)'};
-		background-color: ${(props) => props.secondaryBg || 'var(--white)'};
+		color: var(--black);
+		background-color: var(--white);
 	}
 `;
 
-export default function Button({ text, secondaryBg }) {
+export default function Button({ text }) {
+	const onMouseLeave = (e) => {
+		if (window.location.pathname === '/') {
+			e.target.style.color = 'var(--white)';
+			e.target.style.border = '1px solid var(--white)';
+		}
+	};
+	const onMouseOver = (e) => {
+		if (window.location.pathname === '/') {
+			e.target.style.color = 'var(--secondary-color)';
+			e.target.style.border = '1px solid var(--secondary-color)';
+			e.target.style.backgroundColor = 'transparent';
+		}
+	};
+
 	return (
-		<Atag secondaryBg className="buttonComponent">
+		<Atag
+			onMouseOver={onMouseOver}
+			onMouseLeave={onMouseLeave}
+			className="buttonComponent"
+		>
 			{text}
 		</Atag>
 	);

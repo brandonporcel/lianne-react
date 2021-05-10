@@ -32,7 +32,7 @@ export default function Home() {
 						<span>Out now</span>
 					</div>
 					<div>
-						<Button secondary secondaryBg="red" text="LISTEN"></Button>
+						<Button text="LISTEN"></Button>
 					</div>
 				</div>
 			</SectionTag>
