@@ -3,11 +3,9 @@ import styled from 'styled-components';
 import img from '../img';
 import SignUpField from './SignUpField';
 import SignUpSelect from './SignUpSelect';
-import SignUpTerms from './SignUpTerms';
+
 import Button from './Button';
 const Container = styled.div`
-	border: 1px solid;
-
 	margin-top: 80px;
 	.signUpSection {
 		background-image: url(${img.noiseBG});
@@ -29,6 +27,14 @@ const Container = styled.div`
 		background-size: cover;
 		background-position: center top;
 	}
+	.terms {
+		font-size: 12px;
+		padding: 10px 0;
+		text-align: center;
+		a:hover {
+			color: var(--secondary-color);
+		}
+	}
 `;
 export default function SignUp() {
 	return (
@@ -40,6 +46,16 @@ export default function SignUp() {
 					<SignUpField type="email" placeholder="Email"></SignUpField>
 					<SignUpSelect></SignUpSelect>
 					<Button text={'Submit'}></Button>
+					<div className="terms">
+						<a
+							href="http://wminewmedia.com/privacy/"
+							target="_blank"
+							rel="noreferrer"
+							title="Terms"
+						>
+							Terms
+						</a>
+					</div>
 				</form>
 			</div>
 			<div className="signUpBackground"></div>
