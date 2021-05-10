@@ -11,6 +11,7 @@ const Atag = styled.a`
 	transition: all 0.5s ease-in-out;
 	cursor: pointer;
 	text-align: center;
+
 	&:hover {
 		color: var(--black);
 		background-color: var(--white);

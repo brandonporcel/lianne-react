@@ -9,13 +9,16 @@ const FieldCtn = styled.div`
 		width: 100%;
 		padding: 0;
 		border: none;
-		border-bottom: 2px solid #fff;
+		border-bottom: 2px solid var(--white);
 		font-size: 20px;
 		font-family: 'Charter ITC W01';
 		font-weight: 400;
-		color: #fff;
+		color: var(--white);
 		outline: none;
 		padding-bottom: 3px;
+		&::placeholder {
+			color: var(--white);
+		}
 	}
 `;
 export default function SignUpField({ type, placeholder, tag }) {
