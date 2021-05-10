@@ -24,7 +24,7 @@ export default function Event({ date, place, city }) {
 			<p>{date}</p>
 			<p> {place} </p>
 			<p> {city} </p>
-			<Button text="tickets"></Button>
+			<Button secondaryBg="violet" text="tickets"></Button>
 		</EventCtn>
 	);
 }

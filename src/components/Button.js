@@ -9,19 +9,21 @@ const Atag = styled.a`
 		props.secondary
 			? '1px solid var(--secondary-color)'
 			: '1px solid var(--white)'};
+	color: var(--white);
 	text-transform: uppercase;
 	padding: 11px 0 7px;
 	transition: all 0.5s ease-in-out;
 	cursor: pointer;
 	text-align: center;
 	&:hover {
-		background: blue;
-		color: ${(props) => (props.secondaryColor ? 'red' : 'var(--black)')};
-		/* background-color: ${(props) =>
-			props.secondary ? '1px solid blue' : '1px solid var(--black)'}; */
+		color: ${(props) =>
+			props.secondary ? 'var(--secondary-color)' : 'var(--black)'};
+		background-color: ${(props) =>
+			props.secondary ? 'transparent' : 'var(--white)'};
+		background-color: ${(props) => props.secondaryBg};
 	}
 `;
 
-export default function Button({ text }) {
+export default function Button({ text, secondary }) {
 	return <Atag className="buttonComponent">{text}</Atag>;
 }
