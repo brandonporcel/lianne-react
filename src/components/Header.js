@@ -6,6 +6,18 @@ import { Spin as Hamburger } from 'hamburger-react';
 
 import { Link } from 'react-router-dom';
 const Ctn = styled.div`
+	a {
+		font-size: 21px;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin: 0 25px;
+		letter-spacing: 2px;
+		color: Red;
+		transition: all 0.5s ease-in-out;
+		&:hover {
+			color: #b9a2c3;
+		}
+	}
 	.mobile-panel {
 		background-color: var(--secondary-color);
 		position: fixed;
@@ -25,6 +37,17 @@ const Ctn = styled.div`
 		max-width: 282px;
 		margin: 0 auto;
 	}
+	ul {
+		text-align: center;
+	}
+	/* a {
+		font-size: 21px;
+		font-weight: 400;
+		text-transform: uppercase;
+		padding: 20px 0;
+		display: block;
+		font-style: normal;
+	} */
 `;
 const HeaderTag = styled.header`
 	position: sticky;
@@ -39,19 +62,7 @@ const HeaderTag = styled.header`
 		display: none;
 	}
 `;
-const MenuLinks = styled.nav`
-	a {
-		font-size: 21px;
-		font-weight: 400;
-		text-transform: uppercase;
-		margin: 0 25px;
-		letter-spacing: 2px;
-		transition: all 0.5s ease-in-out;
-		&:hover {
-			color: #b9a2c3;
-		}
-	}
-`;
+const MenuLinks = styled.nav``;
 
 export default function Header() {
 	const [isOpen, setOpen] = useState(false);
@@ -79,19 +90,18 @@ export default function Header() {
 						<div className="mobileLogo">
 							<img src={img.whiteLogo} alt="" />
 						</div>
-						<ul></ul>
+						<ul>
+							<li>
+								<a href="/">Home</a>
+							</li>
+						</ul>
 					</nav>
 				</div>
 				<Media query={`(max-width: 1024px)`}>
 					{(matches) =>
-						matches ? (
-							<Hamburger toggled={isOpen} toggle={setOpen} />
-						) : (
-							<div></div>
-						)
+						matches ? <Hamburger toggled={isOpen} toggle={setOpen} /> : <></>
 					}
 				</Media>
-				{/* <Hamburger toggled={isOpen} toggle={setOpen} /> */}
 			</Ctn>
 		</>
 	);
