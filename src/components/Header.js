@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import img from '../img';
 import Media from 'react-media';
 import { Spin as Hamburger } from 'hamburger-react';
-
 import { Link } from 'react-router-dom';
+
 const Ctn = styled.div`
 	a {
 		font-size: 21px;
@@ -12,14 +12,16 @@ const Ctn = styled.div`
 		text-transform: uppercase;
 		margin: 0 25px;
 		letter-spacing: 2px;
-		color: Red;
 		transition: all 0.5s ease-in-out;
 		&:hover {
 			color: #b9a2c3;
 		}
 	}
+
 	.mobile-panel {
-		background-color: var(--secondary-color);
+		/* background-color: var(--secondary-color); */
+		background-color: #9b7baa;
+		z-index: 50;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -37,17 +39,14 @@ const Ctn = styled.div`
 		max-width: 282px;
 		margin: 0 auto;
 	}
-	ul {
+	div {
 		text-align: center;
+		a {
+			padding: 20px 0;
+			display: block;
+			font-style: normal;
+		}
 	}
-	/* a {
-		font-size: 21px;
-		font-weight: 400;
-		text-transform: uppercase;
-		padding: 20px 0;
-		display: block;
-		font-style: normal;
-	} */
 `;
 const HeaderTag = styled.header`
 	position: sticky;
@@ -67,10 +66,18 @@ const MenuLinks = styled.nav``;
 export default function Header() {
 	const [isOpen, setOpen] = useState(false);
 	useEffect(() => {
+		const d = document;
+		d.addEventListener('click', (e) => {
+			if (e.target.matches('.links-ctn') || e.target.matches('.links-ctn *')) {
+				d.querySelector('.mobile-panel').classList.remove('active');
+				setOpen(false);
+			}
+		});
+
 		if (isOpen) {
-			document.querySelector('.mobile-panel').classList.add('active');
+			d.querySelector('.mobile-panel').classList.add('active');
 		} else {
-			document.querySelector('.mobile-panel').classList.remove('active');
+			d.querySelector('.mobile-panel').classList.remove('active');
 		}
 	}, [isOpen]);
 	return (
@@ -85,23 +92,7 @@ export default function Header() {
 						<Link to="/signup">sign up</Link>
 					</MenuLinks>
 				</HeaderTag>
-				<div className="mobile-panel">
-					<nav className="">
-						<div className="mobileLogo">
-							<img src={img.whiteLogo} alt="" />
-						</div>
-						<ul>
-							<li>
-								<a href="/">Home</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<Media query={`(max-width: 1024px)`}>
-					{(matches) =>
-						matches ? <Hamburger toggled={isOpen} toggle={setOpen} /> : <></>
-					}
-				</Media>
+				<MobileHeader></MobileHeader>
 			</Ctn>
 		</>
 	);
