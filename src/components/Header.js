@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import img from '../img';
-import Media from 'react-media';
-import { Spin as Hamburger } from 'hamburger-react';
 import { Link } from 'react-router-dom';
-
+import MobileHeader from './MobileHeader';
 const Ctn = styled.div`
 	a {
 		font-size: 21px;
@@ -15,36 +12,6 @@ const Ctn = styled.div`
 		transition: all 0.5s ease-in-out;
 		&:hover {
 			color: #b9a2c3;
-		}
-	}
-
-	.mobile-panel {
-		/* background-color: var(--secondary-color); */
-		background-color: #9b7baa;
-		z-index: 50;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		transition: transform 0.5s ease;
-		transform: translate(0, -100%);
-	}
-	.mobile-panel.active {
-		transform: translate(0, 0);
-	}
-	.mobileLogo {
-		padding: 60px 0 20px;
-		width: 68.2%;
-		max-width: 282px;
-		margin: 0 auto;
-	}
-	div {
-		text-align: center;
-		a {
-			padding: 20px 0;
-			display: block;
-			font-style: normal;
 		}
 	}
 `;
@@ -64,22 +31,6 @@ const HeaderTag = styled.header`
 const MenuLinks = styled.nav``;
 
 export default function Header() {
-	const [isOpen, setOpen] = useState(false);
-	useEffect(() => {
-		const d = document;
-		d.addEventListener('click', (e) => {
-			if (e.target.matches('.links-ctn') || e.target.matches('.links-ctn *')) {
-				d.querySelector('.mobile-panel').classList.remove('active');
-				setOpen(false);
-			}
-		});
-
-		if (isOpen) {
-			d.querySelector('.mobile-panel').classList.add('active');
-		} else {
-			d.querySelector('.mobile-panel').classList.remove('active');
-		}
-	}, [isOpen]);
 	return (
 		<>
 			<Ctn>

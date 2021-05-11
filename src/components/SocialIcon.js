@@ -12,6 +12,7 @@ import {
 const SocialCtn = styled.p`
 	padding: 25px 0;
 	text-align: center;
+
 	a {
 		font-size: 25px;
 		margin-right: 35px;

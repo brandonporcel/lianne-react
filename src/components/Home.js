@@ -8,7 +8,6 @@ const SectionTag = styled.section`
 	width: 608px;
 	background: green;
 	@media screen and (max-width: 1024px) {
-		background: red;
 		max-width: 375px;
 	}
 	.newAlbumAndOutNow {
