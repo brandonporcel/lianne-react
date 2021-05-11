@@ -8,9 +8,16 @@ import { Link } from 'react-router-dom';
 const MobilePanel = styled.div`
 	.mobileHeaderrr {
 		position: relative;
+		z-index: 100;
+		margin-bottom: 20px;
+		.page-title {
+			font-size: 30px;
+			position: absolute;
+			width: 100%;
+			text-align: center;
+		}
 		.hamburger-react {
 			position: absolute;
-			z-index: 100;
 		}
 	}
 	.mobile-panel {
@@ -82,6 +89,7 @@ export default function MobileHeader() {
 				{(matches) =>
 					matches ? (
 						<div className="mobileHeaderrr">
+							<div className="page-title">Videos</div>
 							<Hamburger toggled={isOpen} toggle={setOpen} />
 						</div>
 					) : (
