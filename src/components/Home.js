@@ -6,6 +6,11 @@ import Button from './Button';
 const SectionTag = styled.section`
 	margin: 0 auto;
 	width: 608px;
+	background: green;
+	@media screen and (max-width: 1024px) {
+		background: red;
+		max-width: 375px;
+	}
 	.newAlbumAndOutNow {
 		display: flex;
 		justify-content: space-between;
