@@ -1,7 +1,7 @@
 import noiseBG from './images/TourNoiseBG.jpg';
+import whiteLogo from './images/LianneWhiteLogo.png';
 // home
 import purpleLogo from './images/LiannePurpleLogo.png';
-import whiteLogo from './images/LianneWhiteLogo.png';
 import album from './images/LianneAlbumCover.png';
 //videos
 import paperTnail from './images/PaperThinThumbnail.jpg';
@@ -21,10 +21,10 @@ import signUpBG from './images/MlistBG.jpg';
 
 const images = {
 	noiseBG,
+	whiteLogo,
 	//
 	album,
 	purpleLogo,
-	whiteLogo,
 	// videos
 	paperTnail,
 	bittersweetTnail,

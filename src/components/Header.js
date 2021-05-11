@@ -1,20 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Hamburger from 'hamburger-react';
+import img from '../img';
+import Media from 'react-media';
+import { Spin as Hamburger } from 'hamburger-react';
 
 import { Link } from 'react-router-dom';
 const Ctn = styled.div`
-	.mobile {
-		display: none;
+	.mobile-panel {
+		background-color: var(--secondary-color);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		transition: transform 0.5s ease;
+		transform: translate(0, -100%);
 	}
-	@media screen and (max-width: 1024px) {
-		.mobile {
-			display: block;
-			height: 30px;
-			width: 30px;
-			background: blue;
-		}
+	.mobile-panel.active {
+		transform: translate(0, 0);
+	}
+	.mobileLogo {
+		padding: 60px 0 20px;
+		width: 68.2%;
+		max-width: 282px;
+		margin: 0 auto;
 	}
 `;
 const HeaderTag = styled.header`
@@ -45,10 +54,18 @@ const MenuLinks = styled.nav`
 `;
 
 export default function Header() {
+	const [isOpen, setOpen] = useState(false);
+	useEffect(() => {
+		if (isOpen) {
+			document.querySelector('.mobile-panel').classList.add('active');
+		} else {
+			document.querySelector('.mobile-panel').classList.remove('active');
+		}
+	}, [isOpen]);
 	return (
 		<>
 			<Ctn>
-				<HeaderTag className="headerrr">
+				<HeaderTag>
 					<MenuLinks>
 						<Link to="/">HOME</Link>
 						<Link to="/videos">videos</Link>
@@ -57,9 +74,24 @@ export default function Header() {
 						<Link to="/signup">sign up</Link>
 					</MenuLinks>
 				</HeaderTag>
-				<div className="mobile">
-					<FontAwesomeIcon icon={faGripLines}></FontAwesomeIcon>
+				<div className="mobile-panel">
+					<nav className="">
+						<div className="mobileLogo">
+							<img src={img.whiteLogo} alt="" />
+						</div>
+						<ul></ul>
+					</nav>
 				</div>
+				<Media query={`(max-width: 1024px)`}>
+					{(matches) =>
+						matches ? (
+							<Hamburger toggled={isOpen} toggle={setOpen} />
+						) : (
+							<div></div>
+						)
+					}
+				</Media>
+				{/* <Hamburger toggled={isOpen} toggle={setOpen} /> */}
 			</Ctn>
 		</>
 	);
