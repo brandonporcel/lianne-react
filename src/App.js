@@ -1,9 +1,7 @@
 import { useEffect } from 'react';
-import Media from 'react-media';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
-import MobileHeader from './components/MobileHeader';
 import Home from './components/Home';
 import Videos from './components/Videos';
 import Tour from './components/Tour';
@@ -31,18 +29,8 @@ function App() {
 	return (
 		<>
 			<Router>
+				<Header></Header>
 				<Switch>
-					<Media query={`(max-width: 1024px)`}>
-						{(matches) =>
-							matches ? (
-								<Route path="/" component={MobileHeader} />
-							) : (
-								<div>
-									<Route exact path="/" component={Header} />
-								</div>
-							)
-						}
-					</Media>
 					<Route exact path="/" component={Home}></Route>
 					<Route path="/videos" component={Videos}></Route>
 					<Route path="/tour" component={Tour}></Route>
