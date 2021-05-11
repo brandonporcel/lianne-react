@@ -31,9 +31,7 @@ const MobilePanel = styled.div`
 			margin: 0 auto;
 		}
 	}
-	.socialIcon-ctn p {
-		display: flex;
-	}
+
 	div {
 		text-align: center;
 		a {
@@ -74,9 +72,7 @@ export default function MobileHeader() {
 						<Link to="/merch">merch</Link>
 						<Link to="/signup">sign up</Link>
 					</div>
-					<div classList="socialIcon-ctn">
-						<SocialIcon></SocialIcon>
-					</div>
+					<SocialIcon></SocialIcon>
 				</nav>
 			</div>
 			<Media query={`(max-width: 1024px)`}>

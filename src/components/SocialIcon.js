@@ -11,8 +11,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 const SocialCtn = styled.p`
 	padding: 25px 0;
-	text-align: center;
-
+	display: flex;
+	justify-content: center;
 	a {
 		font-size: 25px;
 		margin-right: 35px;
