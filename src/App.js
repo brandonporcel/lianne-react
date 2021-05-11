@@ -9,33 +9,22 @@ import Merch from './components/Merch';
 import SignUp from './components/SignUp';
 import Footer from './components/Footer';
 
-// (function (history) {
-// 	var pushState = history.pushState;
-// 	history.pushState = function (state) {
-// 		// YOUR CUSTOM HOOK / FUNCTION
-// 		console.log('I am called from pushStateHook');
-// 		return pushState.apply(history, arguments);
-// 	};
-// })(window.history);
-
-let currentUrl = window.location.pathname;
 function App() {
 	useEffect(() => {
+		let currentUrl = window.location.pathname;
 		// https://itsopensource.com/how-to-call-a-function-on-URL-change-in-javascript/
 		(function (history) {
 			var pushState = history.pushState;
-			console.log(window.location.pathname, 'abrrr');
+
 			history.pushState = function (state) {
 				currentUrl = window.location.pathname;
-				console.log(currentUrl);
-				// document.querySelector(
-				// 	'title'
-				// ).textContent = `Lianne La Havas . ${currentUrl}`;
+				document.querySelector(
+					'title'
+				).textContent = `Lianne La Havas${currentUrl}+1`;
 
 				return pushState.apply(history, arguments);
 			};
 		})(window.history);
-		// console.log(window.location.pathname);
 	}, []);
 	return (
 		<>

@@ -9,13 +9,13 @@ const VideoContent = styled.div`
 		border: 1px solid var(--white);
 	}
 `;
-export default function videoContent({ img }) {
+
+export default function videoContent({ img, title }) {
 	return (
 		<VideoContent>
 			<div className="video-thumbanail">
 				<img src={img} alt="" />
-				<div className="playIcon"></div>
-				<div className="video-title"></div>
+				<div className="video-title">{title}</div>
 			</div>
 		</VideoContent>
 	);

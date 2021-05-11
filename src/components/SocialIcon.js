@@ -47,7 +47,7 @@ export default function SocialIcon() {
 				<FontAwesomeIcon icon={faYoutube}></FontAwesomeIcon>
 			</a>
 			<a
-				href="https://spotify.com/liannelahavas"
+				href="https://open.spotify.com/artist/2RP4pPHTXlQpDnO9LvR7Yt"
 				rel="noreferrer"
 				target="_blank"
 			>

@@ -21,11 +21,12 @@ const VideoSliderCtn = styled.div`
 export default function VideoSlider() {
 	return (
 		<VideoSliderCtn className="videoSliderCtn">
-			<VideoContent img={img.paperTnail}></VideoContent>
-			<VideoContent img={img.bittersweetTnail}></VideoContent>
-			<VideoContent img={img.fishesTnail}></VideoContent>
-			<VideoContent img={img.fishesTnail}></VideoContent>
-			<VideoContent img={img.fishesTnail}></VideoContent>
+			<VideoContent title="Paper Thin" img={img.paperTnail}></VideoContent>
+			<VideoContent
+				title="BitterSweet"
+				img={img.bittersweetTnail}
+			></VideoContent>
+			<VideoContent title="Weird Fishes" img={img.fishesTnail}></VideoContent>
 		</VideoSliderCtn>
 	);
 }

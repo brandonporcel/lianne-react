@@ -44,13 +44,13 @@ export default function Tour() {
 					<div>
 						<Event
 							date="9.12.2018"
-							place="Teatro juan domingo Peron"
-							city="Lomas de Zamora, argentina"
+							place="Juan Domingo Peron Theater"
+							city="Lomas de Zamora, Argentina"
 						></Event>
 						<Event
 							date="3.5.2021"
 							place="Florencio Valera Stadium"
-							city="Buenos AIRES, argentina"
+							city="Buenos Aires, Argentina"
 						></Event>
 					</div>
 				</div>
