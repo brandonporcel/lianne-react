@@ -2,13 +2,17 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import VideoSlider from './VideoSlider';
 const VideoSection = styled.section`
-	padding-top: 81px;
+	padding-top: 80px;
+	width: 80%;
+	margin: 0 auto;
 	.main-video {
 		text-align: center;
 		margin: 0 auto 50px;
 		width: 1040px;
 		position: relative;
-
+		img {
+			width: 80.4%;
+		}
 		.video-title.show {
 			transition: all 0.5s ease-in-out;
 			position: absolute;
@@ -27,8 +31,14 @@ const VideoSection = styled.section`
 			display: none;
 		}
 	}
-	.main-video img {
-		width: 80.4%;
+	@media screen and (max-width: 1024px) {
+		padding-top: 0;
+		& .main-video {
+			width: 100%;
+			& img {
+				width: 100%;
+			}
+		}
 	}
 `;
 export default function Videos() {

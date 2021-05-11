@@ -7,7 +7,6 @@ const VideoSliderCtn = styled.div`
 	width: 1040px;
 	display: flex;
 	overflow: auto;
-
 	&::-webkit-scrollbar {
 		height: 7px;
 	}
@@ -16,17 +15,28 @@ const VideoSliderCtn = styled.div`
 		background-color: rgb(255, 255, 255, 1);
 		border-radius: 10px;
 	}
+	@media screen and (max-width: 1024px) {
+		flex-direction: column;
+		width: 100%;
+		& div {
+			width: 100%;
+			& .video-thumbanail {
+				margin-bottom: 20px;
+				border: none;
+			}
+		}
+	}
 `;
 
 export default function VideoSlider() {
 	return (
 		<VideoSliderCtn className="videoSliderCtn">
-			<VideoContent title="Paper Thin" img={img.paperTnail}></VideoContent>
+			<VideoContent title="Weird Fishes" img={img.fishesTnail}></VideoContent>
 			<VideoContent
 				title="BitterSweet"
 				img={img.bittersweetTnail}
 			></VideoContent>
-			<VideoContent title="Weird Fishes" img={img.fishesTnail}></VideoContent>
+			<VideoContent title="Paper Thin" img={img.paperTnail}></VideoContent>
 		</VideoSliderCtn>
 	);
 }

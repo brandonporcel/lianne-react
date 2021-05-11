@@ -8,7 +8,9 @@ const SectionTag = styled.section`
 	width: 608px;
 
 	@media screen and (max-width: 1024px) {
-		width: 375px;
+		/* para que cuando haga mas chica la pantlla,se achique lol */
+		width: 90.6%;
+		max-width: 375px;
 	}
 	.newAlbumAndOutNow {
 		display: flex;

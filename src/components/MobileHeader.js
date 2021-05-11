@@ -6,9 +6,12 @@ import Media from 'react-media';
 import { Spin as Hamburger } from 'hamburger-react';
 import { Link } from 'react-router-dom';
 const MobilePanel = styled.div`
-	.hamburger-react {
+	.mobileHeaderrr {
 		position: relative;
-		z-index: 100;
+		.hamburger-react {
+			position: absolute;
+			z-index: 100;
+		}
 	}
 	.mobile-panel {
 		/* background-color: var(--secondary-color); */
@@ -77,7 +80,13 @@ export default function MobileHeader() {
 			</div>
 			<Media query={`(max-width: 1024px)`}>
 				{(matches) =>
-					matches ? <Hamburger toggled={isOpen} toggle={setOpen} /> : <></>
+					matches ? (
+						<div className="mobileHeaderrr">
+							<Hamburger toggled={isOpen} toggle={setOpen} />
+						</div>
+					) : (
+						<></>
+					)
 				}
 			</Media>
 		</MobilePanel>
