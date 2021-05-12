@@ -42,9 +42,11 @@ const Container = styled.div`
 		.merchContents {
 			flex-direction: column;
 			padding-left: 0;
+			width: 90%;
+			align-items: center;
 		}
 		.background {
-			background-size: 80% auto;
+			background-size: cover;
 			background-position: center;
 		}
 	}

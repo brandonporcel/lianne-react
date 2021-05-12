@@ -4,8 +4,13 @@ const MerchContentt = styled.li`
 	margin-right: 50px;
 	.merchImage {
 		height: 380px;
-
-		max-width: 380px;
+		width: 380px;
+	}
+	@media screen and (max-width: 1024px) {
+		margin-right: 0;
+		.merchImage {
+			width: 80%;
+		}
 	}
 `;
 export default function MerchContent({ img }) {
