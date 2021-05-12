@@ -31,8 +31,15 @@ function App() {
 			<Router>
 				<Header></Header>
 				<Switch>
-					<Route exact path="/" component={Home}></Route>
-					<Route path="/videos" component={Videos}></Route>
+					<Route
+						exact
+						path={`${process.env.PUBLIC_URL}/`}
+						component={Home}
+					></Route>
+					<Route
+						path={`${process.env.PUBLIC_URL}/videos`}
+						component={Videos}
+					></Route>
 					<Route path="/tour" component={Tour}></Route>
 					<Route path="/merch" component={Merch}></Route>
 					<Route path="/signup" component={SignUp}></Route>
