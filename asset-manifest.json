@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/lianne-react/static/css/main.8d4a7485.chunk.css",
-    "main.js": "/lianne-react/static/js/main.a65fce72.chunk.js",
-    "main.js.map": "/lianne-react/static/js/main.a65fce72.chunk.js.map",
+    "main.js": "/lianne-react/static/js/main.ffa52d06.chunk.js",
+    "main.js.map": "/lianne-react/static/js/main.ffa52d06.chunk.js.map",
     "runtime-main.js": "/lianne-react/static/js/runtime-main.1326fff6.js",
     "runtime-main.js.map": "/lianne-react/static/js/runtime-main.1326fff6.js.map",
     "static/js/2.4ee4e619.chunk.js": "/lianne-react/static/js/2.4ee4e619.chunk.js",
@@ -30,6 +30,6 @@
     "static/js/runtime-main.1326fff6.js",
     "static/js/2.4ee4e619.chunk.js",
     "static/css/main.8d4a7485.chunk.css",
-    "static/js/main.a65fce72.chunk.js"
+    "static/js/main.ffa52d06.chunk.js"
   ]
 }
