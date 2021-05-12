@@ -18,7 +18,6 @@ const DobCtn = styled.div`
 
 	input,
 	select {
-		font-size: 16px;
 		background: transparent;
 		display: block;
 		width: 100%;
@@ -31,6 +30,12 @@ const DobCtn = styled.div`
 		color: #fff;
 		outline: none;
 		padding-bottom: 3px;
+	}
+	@media screen and (max-width: 415px) {
+		input,
+		select {
+			font-size: 16px;
+		}
 	}
 `;
 export default function SignUpSelect() {

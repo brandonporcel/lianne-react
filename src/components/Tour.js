@@ -53,7 +53,8 @@ const Container = styled.div`
 			padding-left: 5px;
 			padding-right: 5px;
 			p {
-				padding: 0;
+				font-size: 14px;
+				padding: 5px;
 			}
 		}
 	}
