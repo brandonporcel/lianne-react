@@ -47,6 +47,14 @@ const Container = styled.div`
 			height: 100%;
 		}
 	}
+	@media screen and (max-width: 415px) {
+		.signUpSection {
+			margin-top: 70%;
+			width: 95%;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
 `;
 export default function SignUp() {
 	return (

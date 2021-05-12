@@ -39,10 +39,22 @@ const Container = styled.div`
 			width: 90%;
 			margin: 0 auto;
 			margin-top: 40%;
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 		.tourBackground {
 			width: 100%;
 			height: 100%;
+		}
+	}
+	@media screen and (max-width: 415px) {
+		.tourSection {
+			width: 95%;
+			padding-left: 5px;
+			padding-right: 5px;
+			p {
+				padding: 0;
+			}
 		}
 	}
 `;

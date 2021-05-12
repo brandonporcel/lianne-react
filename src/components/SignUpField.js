@@ -4,6 +4,7 @@ const FieldCtn = styled.div`
 	padding-bottom: 40px;
 	input,
 	select {
+		font-size: 16px;
 		background: transparent;
 		display: block;
 		width: 100%;

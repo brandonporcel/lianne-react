@@ -18,6 +18,7 @@ const DobCtn = styled.div`
 
 	input,
 	select {
+		font-size: 16px;
 		background: transparent;
 		display: block;
 		width: 100%;

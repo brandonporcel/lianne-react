@@ -8,9 +8,14 @@ const MerchContentt = styled.li`
 	}
 	@media screen and (max-width: 1024px) {
 		margin-right: 0;
+
 		.merchImage {
 			width: 80%;
 		}
+	}
+	@media screen and (max-width: 415px) {
+		display: flex;
+		justify-content: center;
 	}
 `;
 export default function MerchContent({ img }) {
