@@ -29,7 +29,7 @@ function App() {
 	return (
 		<>
 			<Router>
-				<Header></Header>
+				<Header title={window.location.pathname}></Header>
 				<Switch>
 					<Route exact path="/" component={Home}></Route>
 					<Route path="/videos" component={Videos}></Route>

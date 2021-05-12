@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import MobileHeader from './MobileHeader';
+import MobileHeaderPanel from './MobileHeaderPanel';
 const Ctn = styled.div`
 	a {
 		font-size: 21px;
@@ -30,7 +30,7 @@ const HeaderTag = styled.header`
 `;
 const MenuLinks = styled.nav``;
 
-export default function Header() {
+export default function Header({ title }) {
 	return (
 		<>
 			<Ctn>
@@ -43,7 +43,7 @@ export default function Header() {
 						<Link to="/signup">sign up</Link>
 					</MenuLinks>
 				</HeaderTag>
-				<MobileHeader></MobileHeader>
+				<MobileHeaderPanel title={title}></MobileHeaderPanel>
 			</Ctn>
 		</>
 	);

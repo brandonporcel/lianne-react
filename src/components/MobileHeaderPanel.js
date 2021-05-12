@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import img from '../img';
 import SocialIcon from './SocialIcon';
+import PageTitle from './PageTitle';
 import Media from 'react-media';
 import { Spin as Hamburger } from 'hamburger-react';
 import { Link } from 'react-router-dom';
@@ -51,7 +52,7 @@ const MobilePanel = styled.div`
 		}
 	}
 `;
-export default function MobileHeader() {
+export default function MobileHeaderPanel({ title }) {
 	const [isOpen, setOpen] = useState(false);
 	useEffect(() => {
 		const d = document;
@@ -89,7 +90,7 @@ export default function MobileHeader() {
 				{(matches) =>
 					matches ? (
 						<div className="mobileHeaderrr">
-							<div className="page-title">Videos</div>
+							<PageTitle title={title}></PageTitle>
 							<Hamburger toggled={isOpen} toggle={setOpen} />
 						</div>
 					) : (
