@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/lianne-react/static/css/main.8d4a7485.chunk.css",
+    "main.js": "/lianne-react/static/js/main.a65fce72.chunk.js",
+    "main.js.map": "/lianne-react/static/js/main.a65fce72.chunk.js.map",
+    "runtime-main.js": "/lianne-react/static/js/runtime-main.1326fff6.js",
+    "runtime-main.js.map": "/lianne-react/static/js/runtime-main.1326fff6.js.map",
+    "static/js/2.4ee4e619.chunk.js": "/lianne-react/static/js/2.4ee4e619.chunk.js",
+    "static/js/2.4ee4e619.chunk.js.map": "/lianne-react/static/js/2.4ee4e619.chunk.js.map",
+    "index.html": "/lianne-react/index.html",
+    "static/css/main.8d4a7485.chunk.css.map": "/lianne-react/static/css/main.8d4a7485.chunk.css.map",
+    "static/js/2.4ee4e619.chunk.js.LICENSE.txt": "/lianne-react/static/js/2.4ee4e619.chunk.js.LICENSE.txt",
+    "static/media/BittersweetThumbnail.9733fceb.jpg": "/lianne-react/static/media/BittersweetThumbnail.9733fceb.jpg",
+    "static/media/LLH-LongSleeve.742b38c3.png": "/lianne-react/static/media/LLH-LongSleeve.742b38c3.png",
+    "static/media/LLH-LongSleeveBundle.c898e016.png": "/lianne-react/static/media/LLH-LongSleeveBundle.c898e016.png",
+    "static/media/Lianne-T-Shirt-Bundle.87e7a3b8.png": "/lianne-react/static/media/Lianne-T-Shirt-Bundle.87e7a3b8.png",
+    "static/media/Lianne-T-Shirt.19f17821.png": "/lianne-react/static/media/Lianne-T-Shirt.19f17821.png",
+    "static/media/LianneAlbumCover.022f1e88.png": "/lianne-react/static/media/LianneAlbumCover.022f1e88.png",
+    "static/media/LiannePurpleLogo.41b0a55d.png": "/lianne-react/static/media/LiannePurpleLogo.41b0a55d.png",
+    "static/media/LianneWhiteLogo.20182c3d.png": "/lianne-react/static/media/LianneWhiteLogo.20182c3d.png",
+    "static/media/MerchBG.e7f1ca03.jpg": "/lianne-react/static/media/MerchBG.e7f1ca03.jpg",
+    "static/media/MlistBG.c5c619c4.jpg": "/lianne-react/static/media/MlistBG.c5c619c4.jpg",
+    "static/media/PaperThinThumbnail.bae7e41e.jpg": "/lianne-react/static/media/PaperThinThumbnail.bae7e41e.jpg",
+    "static/media/StandardVinyl.9edc173d.png": "/lianne-react/static/media/StandardVinyl.9edc173d.png",
+    "static/media/TourBG.de2cc575.jpg": "/lianne-react/static/media/TourBG.de2cc575.jpg",
+    "static/media/TourNoiseBG.141f17ca.jpg": "/lianne-react/static/media/TourNoiseBG.141f17ca.jpg",
+    "static/media/WeirdFishesThumbnail.c39e52d2.jpg": "/lianne-react/static/media/WeirdFishesThumbnail.c39e52d2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1326fff6.js",
+    "static/js/2.4ee4e619.chunk.js",
+    "static/css/main.8d4a7485.chunk.css",
+    "static/js/main.a65fce72.chunk.js"
+  ]
+}
