@@ -5,6 +5,8 @@ import img from '../img';
 import Event from './Event';
 const SetBackground = {};
 const Container = styled.div`
+	/* esta medida es a ojo,deberia ser un calc. height de la pagina - le medida del header y footer */
+	height: 430px;
 	display: flex;
 	align-items: center;
 	.tourSection {
@@ -32,6 +34,7 @@ const Container = styled.div`
 		background-repeat: no-repeat;
 	}
 	@media screen and (max-width: 1024px) {
+		height: auto;
 		.tourSection {
 			width: 90%;
 			margin: 0 auto;

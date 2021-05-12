@@ -9,10 +9,10 @@ const Container = styled.div`
 	margin-top: 80px;
 	.signUpSection {
 		background-image: url(${img.noiseBG});
-		/* height: 900px; */
-		width: 50%;
+		height: auto;
 		margin: 0 40% 0 auto;
-		max-width: 670px;
+		width: 50%;
+		width: 670px;
 		padding: 5.5% 10.5%;
 	}
 	.signUpBackground {
@@ -33,6 +33,18 @@ const Container = styled.div`
 		text-align: center;
 		a:hover {
 			color: var(--secondary-color);
+		}
+	}
+	@media screen and (max-width: 1024px) {
+		.signUpSection {
+			width: 90%;
+			margin: 0 auto;
+			margin-top: 40%;
+			padding: 40px;
+		}
+		.signUpBackground {
+			width: 100%;
+			height: 100%;
 		}
 	}
 `;
