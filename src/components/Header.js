@@ -43,7 +43,7 @@ export default function Header({ title }) {
 						<Link to="/signup">sign up</Link>
 					</MenuLinks>
 				</HeaderTag>
-				<MobileHeaderPanel title={title}></MobileHeaderPanel>
+				<MobileHeaderPanel></MobileHeaderPanel>
 			</Ctn>
 		</>
 	);

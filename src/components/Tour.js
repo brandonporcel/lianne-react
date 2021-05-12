@@ -3,15 +3,8 @@ import styled from 'styled-components';
 import img from '../img';
 
 import Event from './Event';
-const SetBackground = {
-	backgroundImage: `url(${img.tourBG})`,
-	backgroundPosition: 'center',
-	backgroundSize: 'cover',
-	backgroundRepeat: 'no-repeat',
-};
+const SetBackground = {};
 const Container = styled.div`
-	/* esta medida es a ojo,deberia ser un calc. height de la pagina - le medida del header y footer */
-	height: 430px;
 	display: flex;
 	align-items: center;
 	.tourSection {
@@ -33,6 +26,21 @@ const Container = styled.div`
 		bottom: 0;
 		width: 50%;
 		z-index: -5;
+		background-image: url(${img.tourBG});
+		background-position: center top;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	@media screen and (max-width: 1024px) {
+		.tourSection {
+			width: 90%;
+			margin: 0 auto;
+			margin-top: 40%;
+		}
+		.tourBackground {
+			width: 100%;
+			height: 100%;
+		}
 	}
 `;
 export default function Tour() {

@@ -8,7 +8,7 @@ const EventCtn = styled.div`
 	padding: 10px 0;
 	font-family: serif;
 	p {
-		padding: 0 5px;
+		padding: 0 10px;
 	}
 	a {
 		height: 39px;

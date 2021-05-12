@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import img from '../img';
 import SocialIcon from './SocialIcon';
-import PageTitle from './PageTitle';
 import Media from 'react-media';
 import { Spin as Hamburger } from 'hamburger-react';
 import { Link } from 'react-router-dom';
@@ -11,14 +10,8 @@ const MobilePanel = styled.div`
 		position: relative;
 		z-index: 100;
 		margin-bottom: 20px;
-		.page-title {
-			font-size: 30px;
-			position: absolute;
-			width: 100%;
-			text-align: center;
-		}
+
 		.hamburger-react {
-			position: absolute;
 		}
 	}
 	.mobile-panel {
@@ -90,7 +83,6 @@ export default function MobileHeaderPanel({ title }) {
 				{(matches) =>
 					matches ? (
 						<div className="mobileHeaderrr">
-							<PageTitle title={title}></PageTitle>
 							<Hamburger toggled={isOpen} toggle={setOpen} />
 						</div>
 					) : (
