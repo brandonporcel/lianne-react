@@ -24,7 +24,7 @@ const MobilePanel = styled.div`
 		right: 0;
 		bottom: 0;
 		transition: transform 0.5s ease;
-		transform: translate(0, -100%);
+		transform: translate(0, -200%);
 		&.active {
 			transform: translate(0, 0);
 		}

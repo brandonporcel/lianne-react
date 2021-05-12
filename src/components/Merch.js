@@ -34,6 +34,20 @@ const Container = styled.div`
 		left: 0;
 		top: 0;
 	}
+	@media screen and (max-width: 1024px) {
+		height: auto;
+		justify-content: center;
+		margin-top: 40%;
+
+		.merchContents {
+			flex-direction: column;
+			padding-left: 0;
+		}
+		.background {
+			background-size: 80% auto;
+			background-position: center;
+		}
+	}
 `;
 const d = document;
 const wheelScroll = (e) => {
